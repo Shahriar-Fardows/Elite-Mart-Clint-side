@@ -2,7 +2,7 @@
 const Home = () => {
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div >
                     <span className="grid grid-cols-1 gap-4">
                         <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="" />

@@ -2,7 +2,7 @@ import { Button, Navbar } from 'flowbite-react';
 import { FaCartArrowDown } from "react-icons/fa6";
 const Header = () => {
   return (
-    <div>
+    <div className="container mx-auto">
       <Navbar fluid rounded>
         <Navbar.Brand href="">
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Elite Mart</span>
