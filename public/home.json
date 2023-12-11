@@ -1,0 +1,80 @@
+{
+    "featuredProducts": [
+        {
+            "id": 1,
+            "name": "Smartphone X",
+            "brand": "TechCo",
+            "price": 599.99,
+            "image": "https://example.com/images/smartphone-x.jpg",
+            "description": "The latest flagship smartphone with advanced features."
+        },
+        {
+            "id": 2,
+            "name": "Wireless Headphones",
+            "brand": "SoundTech",
+            "price": 129.99,
+            "image": "https://example.com/images/wireless-headphones.jpg",
+            "description": "Immerse yourself in high-quality sound without cords."
+        },
+        {
+            "id": 3,
+            "name": "Smart Watch",
+            "brand": "GadgetGear",
+            "price": 199.99,
+            "image": "https://example.com/images/smart-watch.jpg",
+            "description": "Stay connected and track your fitness on the go."
+        }
+    ],
+    "bestSellers": [
+        {
+            "id": 4,
+            "name": "Laptop Pro",
+            "brand": "TechMasters",
+            "price": 1299.99,
+            "image": "https://example.com/images/laptop-pro.jpg",
+            "description": "Powerful laptop for work and entertainment."
+        },
+        {
+            "id": 5,
+            "name": "Gaming Console",
+            "brand": "GameTech",
+            "price": 399.99,
+            "image": "https://example.com/images/gaming-console.jpg",
+            "description": "Experience the latest games in high definition."
+        },
+        {
+            "id": 6,
+            "name": "Camera Kit",
+            "brand": "PhotoTech",
+            "price": 899.99,
+            "image": "https://example.com/images/camera-kit.jpg",
+            "description": "Capture moments with professional-grade quality."
+        }
+    ],
+    "specialDeals": [
+        {
+            "id": 7,
+            "name": "4K Smart TV",
+            "brand": "VisualTech",
+            "price": 799.99,
+            "image": "https://example.com/images/smart-tv.jpg",
+            "description": "Enhance your viewing experience with stunning clarity."
+        },
+        {
+            "id": 8,
+            "name": "Portable Speaker",
+            "brand": "AudioMasters",
+            "price": 79.99,
+            "image": "https://example.com/images/portable-speaker.jpg",
+            "description": "Take your music anywhere with powerful sound."
+        },
+        {
+            "id": 9,
+            "name": "Fitness Tracker",
+            "brand": "FitGear",
+            "price": 49.99,
+            "image": "https://example.com/images/fitness-tracker.jpg",
+            "description": "Monitor your health and achieve your fitness goals."
+        }
+    ]
+}

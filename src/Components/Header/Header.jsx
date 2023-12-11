@@ -1,69 +1,53 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-
+import { Button, Navbar } from 'flowbite-react';
+import { FaCartArrowDown } from "react-icons/fa6";
 const Header = () => {
-    const [user, setUser] = useState([''])
-    
+  return (
+    <div>
+      <Navbar fluid rounded>
+        <Navbar.Brand href="">
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Elite Mart</span>
+        </Navbar.Brand>
+        <div className="flex md:order-2">
+      <Button className ="ml-4 order-4"><FaCartArrowDown /></Button>
 
-    const NavbarLink = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to='/contact'>Contact Us</NavLink></li>
-    </>
-    return (
-        <div className="navbar bg-base-100">
-            <div className="navbar-start">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        {NavbarLink}
-                    </ul>
-                </div>
-                <a className="btn btn-ghost text-xl">Elite-Mart</a>
+          <div className="flex md:order-2">
+            <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" className="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+              <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+              </svg>
+              <span className="sr-only">Search</span>
+            </button>
+            <div className="relative hidden md:block">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                </svg>
+                <span className="sr-only">Search icon</span>
+              </div>
+              <input type="text" id="search-navbar" className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." />
             </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    {NavbarLink}
-                </ul>
-            </div>
-            <div className="navbar-end">
-                {
-                    user ?
-                        <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
-                            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                Green to blue
-                            </span>
-                        </button>
-                        :
-                        <div className="flex-none gap-2">
-                        <div className="form-control">
-                          <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
-                        </div>
-                        <div className="dropdown dropdown-end">
-                          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                              <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                            </div>
-                          </div>
-                          <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                            <li>
-                              <a className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
-                              </a>
-                            </li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
-                          </ul>
-                        </div>
-                      </div>
-               }
-
-            </div>
+            <button data-collapse-toggle="navbar-search" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+              <span className="sr-only">Open main menu</span>
+              <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              </svg>
+            </button>
+          </div>
+          <Navbar.Toggle />
+         
         </div>
-    );
+        
+        <Navbar.Collapse>
+          <Navbar.Link href="/" active>
+            Home
+          </Navbar.Link>
+          <Navbar.Link href="/Shop">Shop</Navbar.Link>
+          <Navbar.Link href="/about">About</Navbar.Link>
+          <Navbar.Link href="/blog">Blog</Navbar.Link>
+          <Navbar.Link href="/contact">Contact</Navbar.Link>
+        </Navbar.Collapse>
+      </Navbar>
+    </div>
+  );
 };
 
 export default Header;
